@@ -14,6 +14,8 @@ Permet de créer des sessions de certification à partir d'un fichier tableur (a
 
   ![image](https://user-images.githubusercontent.com/53106394/214413223-c3777489-3b1b-4eb3-a7a4-d610854d9f84.png)
   
-- Retournez sur Pix Certif et collez (Ctrl+V) puis validez avec la touche entrer.
+- Retournez sur Pix Certif et collez (Ctrl+V) puis validez avec le bouton Ok ou la touche entrer.
+
+  ![image](https://user-images.githubusercontent.com/53106394/214413834-80e0cb2b-b7cb-453e-b442-33b423cc3067.png)
 
 - Patientez jusqu'à ce qu'un message indique que tout est terminé !
