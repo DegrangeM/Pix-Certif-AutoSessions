@@ -19,3 +19,9 @@ Permet de créer des sessions de certification à partir d'un fichier tableur (a
   ![image](https://user-images.githubusercontent.com/53106394/214414374-d024e7cb-01de-4892-8f16-bd378d30d874.png)
 
 - Patientez jusqu'à ce qu'un message indique que tout est terminé !
+
+## Attention
+
+Je ne suis pas réponsable si ça casse tout :)
+
+Pensez à vérifier rapidement qu'il n'y ait pas eu d'erreur !
