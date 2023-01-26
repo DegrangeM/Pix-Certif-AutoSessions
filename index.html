@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix Certif AutoSessions</title>
+</head>
+
+<body>
+    <h1>Pix Certif AutoSessions</h1>
+    <p>
+        Glissez déposez le lien ci-dessous dans votre barre de favoris / marque page.<br />
+    </p>
+    <p>
+        <a href="#" id="script">Pix Certif AutoSessions</a>
+    </p>
+    <p>
+        <img src="tuto1.gif" style="border: 1px solid black;filter:drop-shadow(2px 4px 6px black);transform: rotate(-5deg) translate(20px, 20px);"/>
+    </p>
+    <script type="text/javascript">
+        // convert pixcertif file content into a bookmarklet link
+        fetch('./pixcertif.js').then(reponse => reponse.text()).then(text => {
+            const link = document.getElementById('script');
+            link.href = 'javascript:' + text..replaceAll(/\r?\n/g, '') + 'void(0);';
+        }
+    </script>
+</body>
+
+</html>
