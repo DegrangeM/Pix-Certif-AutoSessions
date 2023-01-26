@@ -9,23 +9,28 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
   if (input !== null) {
     document.body.style.cursor = 'wait';
 
-    let SESSIONS = input.split(/\r?\n/).map(x => x.split("\t")).map(x => ({
-      site: x[0].replaceAll('"',''),
-      classe: x[1].replaceAll('"',''),
-      date: x[2].replaceAll('"',''),
-      heure: x[3].replaceAll('"',''),
-      observation: x[4].replaceAll('"',''),
-      surveillants: x[5].replaceAll('"',''),
-      salle: x[6].replaceAll('"','')
-    }));
+    let ACCESS_TOKEN;
+    let ORGA_ID;
+    let SESSIONS;
 
-    /* ETAPE 1 : On récupère le token de session */
+    Promise.resolve().then(() => {
+      SESSIONS = input.split(/\r?\n/).map(x => x.split("\t")).map(x => ({
+        site: x[0].replaceAll('"', ''),
+        classe: x[1].replaceAll('"', ''),
+        date: x[2].replaceAll('"', ''),
+        heure: x[3].replaceAll('"', ''),
+        observation: x[4].replaceAll('"', ''),
+        surveillants: x[5].replaceAll('"', ''),
+        salle: x[6].replaceAll('"', '')
+      }));
 
-    let ACCESS_TOKEN = JSON.parse(localStorage.getItem('ember_simple_auth-session')).authenticated.access_token;
-    let ORGA_ID = false;
+      /* ETAPE 1 : On récupère le token de session */
 
-    /* ETAPE 2 : On récupère l'ID d'établissement */
-    fetch("https://certif.pix.fr/api/certification-point-of-contacts/me", {
+      ACCESS_TOKEN = JSON.parse(localStorage.getItem('ember_simple_auth-session')).authenticated.access_token;
+      ORGA_ID = false;
+
+      /* ETAPE 2 : On récupère l'ID d'établissement */
+    }).then(() => fetch("https://certif.pix.fr/api/certification-point-of-contacts/me", {
       "headers": {
         "accept": "application/vnd.api+json",
         "accept-language": "fr",
@@ -41,7 +46,7 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
       "method": "GET",
       "mode": "cors",
       "credentials": "include"
-    }).then(response => response.json())
+    })).then(response => response.json())
       .then(json => {
         ORGA_ID = json.included[0].id;
       })
@@ -124,7 +129,8 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
           }
         }
         return p;
-      }).then(() => { document.body.style.cursor = 'default'; alert('Terminé !'); location.reload(); }).catch((e) => { alert('Erreur : ' + e); });
+      }).then(() => { document.body.style.cursor = 'default'; alert('Terminé !'); location.reload(); })
+      .catch((e) => { document.body.style.cursor = 'not-allowed'; alert('Erreur : ' + e); });
   }
 } else {
   alert('Ce script doit être utilisé sur le site de Pix certif !');
