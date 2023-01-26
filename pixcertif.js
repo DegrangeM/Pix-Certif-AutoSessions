@@ -10,13 +10,13 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
     document.body.style.cursor = 'wait';
 
     let SESSIONS = input.split(/\r?\n/).map(x => x.split("\t")).map(x => ({
-      site: x[0],
-      classe: x[1],
-      date: x[2],
-      heure: x[3],
-      observation: x[4],
-      surveillants: x[5],
-      salle: x[6]
+      site: x[0].replaceAll('"',''),
+      classe: x[1].replaceAll('"',''),
+      date: x[2].replaceAll('"',''),
+      heure: x[3].replaceAll('"',''),
+      observation: x[4].replaceAll('"',''),
+      surveillants: x[5].replaceAll('"',''),
+      salle: x[6].replaceAll('"','')
     }));
 
     /* ETAPE 1 : On récupère le token de session */
