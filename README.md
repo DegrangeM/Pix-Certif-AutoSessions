@@ -32,4 +32,6 @@ Permet de créer des sessions de certification à partir d'un fichier tableur (a
 
 Je ne suis pas réponsable si ça casse tout :)
 
+N'hésitez pas à faire un test avec les données d'exemples, vous pourrez ensuite supprimer les sessions crées suite à votre test.
+
 Pensez à vérifier rapidement qu'il n'y ait pas eu d'erreur !
