@@ -124,7 +124,7 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
           }
         }
         return p;
-      }).then(() => { document.body.style.cursor = 'default'; alert('Terminé !'); }).catch((e) => { alert('Erreur : ' + e); });
+      }).then(() => { document.body.style.cursor = 'default'; alert('Terminé !'); location.reload(); }).catch((e) => { alert('Erreur : ' + e); });
   }
 } else {
   alert('Ce script doit être utilisé sur le site de Pix certif !');
