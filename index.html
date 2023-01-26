@@ -24,7 +24,7 @@
         fetch('./pixcertif.js').then(reponse => reponse.text()).then(text => {
             const link = document.getElementById('script');
             link.href = 'javascript:' + text.replaceAll(/\r?\n/g, '') + 'void(0);';
-        }
+        });
     </script>
 </body>
 
