@@ -7,7 +7,7 @@ Permet de créer des sessions de certification à partir d'un fichier tableur (a
 ### Installation du script
 
 - Cliquez sur le lien [installation du script](https://degrangem.github.io/Pix-Certif-AutoSessions/) et suivez les instructions pour installer le script. Revenez ensuite sur cette page et suivez le reste des instructions.
--
+
 ### Préparation du fichier tableau
 
 - Téléchargez le fichier [pix_certif.ods](https://github.com/DegrangeM/Pix-Certif-AutoSessions/raw/master/pix_certif.ods) et remplissez-le (pensez à supprimer les deux lignes d'exemples). Attention la colonne classe doit correspondre au nom de la classe sur Pix afin que les élèves soient automatiquement ajoutés (laisser vide pour ne pas inscrire automatiquement les élèves).
