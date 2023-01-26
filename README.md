@@ -2,6 +2,8 @@
  
 Permet de créer des sessions de certification à partir d'un fichier tableur (avec inscriptions des élèves).
 
+![image](https://user-images.githubusercontent.com/53106394/214732875-c1da8928-a31c-43da-9f35-001978d27b61.png)
+
 ## Fonctionnement
 
 ### Installation du script
@@ -26,7 +28,7 @@ Permet de créer des sessions de certification à partir d'un fichier tableur (a
 
   ![image](https://user-images.githubusercontent.com/53106394/214414374-d024e7cb-01de-4892-8f16-bd378d30d874.png)
 
-- Patientez jusqu'à ce qu'un message indique que tout est terminé !
+- Patientez jusqu'à ce qu'un message indique que tout est terminé ! A noter que chaque session prend environ 10 secondes à être crée.
 
 ## Attention
 
