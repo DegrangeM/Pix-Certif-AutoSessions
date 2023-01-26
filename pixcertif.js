@@ -75,7 +75,7 @@ fetch("https://certif.pix.fr/api/certification-point-of-contacts/me", {
         .then(json => {
           sessionId = json.data.id;
         })
-        .then(wait)
+        .then(wait);
       if (session.classe) {
         /* Etape 3bis1 : On récupère les élèves de la classe */
         let eleves;
