@@ -108,7 +108,7 @@ Nom du site | Classe | Date | Heure | Observation | Surveillants | Nom de la sal
               })
               .then(wait)
               /* Etape 3bis2 : On inscrit les élèves de la classe */
-              .then(() => fetch("https://certif.pix.fr/api/sessions/" + sessionId + "/enroll-students-to-session", {
+              .then(() => fetch("https://certif.pix.fr/api/sessions/" + sessionId + "/enrol-students-to-session", {
                 "headers": {
                   "accept": "application/vnd.api+json",
                   "accept-language": "fr",
